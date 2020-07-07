@@ -151,29 +151,6 @@ class SettingsView extends AbstractSettingsView<Props, State> {
                 onClose = { this._onClose }>
                 <ScrollView>
                     <FormSectionHeader
-                        label = 'settingsView.profileSection' />
-                    <FormRow
-                        fieldSeparator = { true }
-                        label = 'settingsView.displayName'
-                        layout = 'column'>
-                        <TextInput
-                            autoCorrect = { false }
-                            onChangeText = { this._onChangeDisplayName }
-                            placeholder = 'John Doe'
-                            value = { displayName } />
-                    </FormRow>
-                    <FormRow
-                        label = 'settingsView.email'
-                        layout = 'column'>
-                        <TextInput
-                            autoCapitalize = 'none'
-                            autoCorrect = { false }
-                            keyboardType = { 'email-address' }
-                            onChangeText = { this._onChangeEmail }
-                            placeholder = 'email@example.com'
-                            value = { email } />
-                    </FormRow>
-                    <FormSectionHeader
                         label = 'settingsView.conferenceSection' />
                     <FormRow
                         fieldSeparator = { true }
@@ -182,9 +159,7 @@ class SettingsView extends AbstractSettingsView<Props, State> {
                         <TextInput
                             autoCapitalize = 'none'
                             autoCorrect = { false }
-                            editable = { this.props._serverURLChangeEnabled }
-                            onBlur = { this._onBlurServerURL }
-                            onChangeText = { this._onChangeServerURL }
+                            editable = { false }
                             placeholder = { this.props._serverURL }
                             value = { serverURL } />
                     </FormRow>

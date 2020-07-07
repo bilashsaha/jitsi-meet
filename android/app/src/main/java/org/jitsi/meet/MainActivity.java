@@ -145,7 +145,7 @@ public class MainActivity extends JitsiMeetActivity {
         JitsiMeetConferenceOptions defaultOptions
             = new JitsiMeetConferenceOptions.Builder()
             .setWelcomePageEnabled(true)
-            .setServerURL(buildURL(defaultURL))
+            .setServerURL(buildURL("https://meet.therapymate.net"))
             .setFeatureFlag("call-integration.enabled", false)
             .setFeatureFlag("server-url-change.enabled", !configurationByRestrictions)
             .build();
