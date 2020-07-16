@@ -251,19 +251,6 @@ class PagedList extends Component<Props, State> {
                 onPress = { this._onSelectPage(index) }
                 style = { styles.pageIndicator } >
                 <View style = { styles.pageIndicatorContent }>
-                    <Icon
-                        src = { page.icon }
-                        style = { [
-                            styles.pageIndicatorIcon,
-                            this._getIndicatorStyle(index)
-                        ] } />
-                    <Text
-                        style = { [
-                            styles.pageIndicatorText,
-                            this._getIndicatorStyle(index)
-                        ] }>
-                        { page.title }
-                    </Text>
                 </View>
             </TouchableOpacity>
         );

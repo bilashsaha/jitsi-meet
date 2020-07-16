@@ -86,7 +86,7 @@ class WelcomePage extends AbstractWelcomePage {
             // already granted the permission.
             navigator.permissions.query({ name: 'camera' }).then(response => {
                 response === 'granted'
-                    && dispatch(createDesiredLocalTracks(MEDIA_TYPE.VIDEO));
+                && dispatch(createDesiredLocalTracks(MEDIA_TYPE.VIDEO));
             });
         }
     }
@@ -165,9 +165,9 @@ class WelcomePage extends AbstractWelcomePage {
      */
     _onFieldFocusChange(focused) {
         focused
-            && this.setState({
-                _fieldFocused: true
-            });
+        && this.setState({
+            _fieldFocused: true
+        });
 
         Animated.timing(
             this.state.hintBoxAnimation,
@@ -177,10 +177,10 @@ class WelcomePage extends AbstractWelcomePage {
             })
             .start(animationState =>
                 animationState.finished
-                    && !focused
-                    && this.setState({
-                        _fieldFocused: false
-                    }));
+                && !focused
+                && this.setState({
+                    _fieldFocused: false
+                }));
     }
 
     /**
@@ -273,10 +273,19 @@ class WelcomePage extends AbstractWelcomePage {
         const { _headerStyles, t } = this.props;
 
         return (
-            <View style={styles.container}>
-            <Text style={styles.welcome}>Welcome to TherapyMeet!</Text>
-            <Text style={styles.instructions}>To join your Telehealth session this application is needed.</Text>
-          </View>
+            <LocalVideoTrackUnderlay style = { styles.welcomePage }>
+                <View style = { _headerStyles.page }>
+                    <Header style = { styles.header }>
+                        <View style={styles.container}>
+                            <Text style={styles.welcome}>Welcome to TherapyMeet!</Text>
+                        </View>
+                    </Header>
+                    <SafeAreaView style = { styles.roomContainer } >
+                        <Text style={styles.instructions}>To join your Telehealth session this application is needed.</Text>
+                    </SafeAreaView>
+                    <WelcomePageLists disabled = { this.state._fieldFocused } />
+                </View>
+            </LocalVideoTrackUnderlay>
         );
     }
 

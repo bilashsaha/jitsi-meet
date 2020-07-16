@@ -93,7 +93,8 @@ export default {
      * The welcome screen header style.
      */
     header: {
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        height: 50
     },
 
     /**
@@ -189,7 +190,9 @@ export default {
      */
     roomContainer: {
         alignSelf: 'stretch',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        height: 50,
+        marginTop: 10
     },
 
     /**
@@ -312,16 +315,24 @@ export default {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        padding: 10,
       },
+    instruction_container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+        backgroundColor: "#EFEFEF"
+    },
       welcome: {
         fontSize: 20,
         textAlign: 'center',
-        margin: 10,
+        paddingBottom: 5
       },
       instructions: {
         textAlign: 'center',
-        color: '#333333',
+        color: '#EFEFEF',
         marginBottom: 5,
+        fontSize: 15,
       },
 };
