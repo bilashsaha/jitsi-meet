@@ -131,7 +131,7 @@ function _mapStateToProps(state: Object) {
     }
 
     return {
-        _calendarEnabled: isCalendarEnabled(state),
+        _calendarEnabled: false,
         _defaultPage: defaultPage
     };
 }

@@ -94,7 +94,7 @@ export default {
      */
     header: {
         justifyContent: 'space-between',
-        height: 50
+        height: 70
     },
 
     /**
@@ -191,7 +191,7 @@ export default {
     roomContainer: {
         alignSelf: 'stretch',
         flexDirection: 'column',
-        height: 50,
+        height: 70,
         marginTop: 10
     },
 
@@ -325,7 +325,7 @@ export default {
         backgroundColor: "#EFEFEF"
     },
       welcome: {
-        fontSize: 20,
+        fontSize: 17,
         textAlign: 'center',
         paddingBottom: 5
       },
@@ -333,6 +333,6 @@ export default {
         textAlign: 'center',
         color: '#EFEFEF',
         marginBottom: 5,
-        fontSize: 15,
+        fontSize: 14,
       },
 };
